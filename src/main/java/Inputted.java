@@ -29,7 +29,7 @@ public class Inputted {
             if (output.matches(regex)) {
                 return output;
             } else {
-                System.err.println(errFormat);
+                System.out.println(errFormat);
             }
         }
     }
@@ -84,7 +84,7 @@ public class Inputted {
             output = new BigInteger(getByRegex(msg, regex, errorNumberFormat));
             if (output.compareTo(BigInteger.valueOf(min)) < 0
                     || output.compareTo(BigInteger.valueOf(max)) > 0) {
-                System.err.println(errorOutOfRange);
+                System.out.println(errorOutOfRange);
             } else {
                 return output.intValue();
             }
@@ -122,7 +122,7 @@ public class Inputted {
             output = new BigDecimal(getByRegex(msg, regex, errorNumberFormat));
             if (output.compareTo(BigDecimal.valueOf(min)) < 0
                     || output.compareTo(BigDecimal.valueOf(max)) > 0) {
-                System.err.println(errorOutOfRange);
+                System.out.println(errorOutOfRange);
             } else {
                 return output.doubleValue();
             }
